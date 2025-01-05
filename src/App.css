@@ -1,0 +1,311 @@
+*{
+box-sizing: border-box;
+margin: 0;
+padding: 0;
+font-family: 'Onest', sans-serif;
+}
+
+body{
+  background-color: #0D0D0D;
+  color:white ;
+  /* border: #0efd1a 3px solid; */
+  padding: 0rem 1rem 0 1rem;
+  display: flex;
+  flex-direction: column;
+  align-content: center;
+  justify-content: center;
+}
+a{
+  text-decoration-line: none;
+  color: #A1A1A1;
+}
+a:hover, a:active {
+  color: #fff;
+  /* border-radius:  2px solid ; */
+
+}
+.logo{
+  margin-left: 1rem;
+  display: flex;
+  align-items: center;
+  gap: 0.8rem;
+  height: 3.2rem;
+}
+li{
+  list-style: none;
+  justify-content: space-evenly;
+
+}
+.navbar{
+  /* border: #fd0e0e 3px solid; */
+  display: flex;
+  justify-content:space-between;
+  align-items: center;
+  border-bottom: #2B2B2B 2px solid;
+}
+.pages{
+  /* border: #0e62fd 3px solid; */
+  display: flex;
+  gap: 2rem;
+  margin-right: 3rem;
+  align-items: center;
+
+}
+.signin{
+  border: #2B2B2B 1px solid;
+  border-radius: 0.5rem;
+  background-color: black;
+  color: white;
+  padding: 0.5rem 1rem;
+}
+.member{
+  border: #2B2B2B 1px solid;
+  border-radius: 0.5rem;
+  background-color: white;
+  color: black;
+  padding: 0.5rem 1rem;
+  font-weight: 600;
+}
+.mainpage{
+  padding: 0rem 2rem 0 2rem;
+ 
+}
+.top{
+  /* border: #0e62fd 3px solid; */
+  display: flex;
+  /* justify-content: space-around; */
+  border-bottom: #2B2B2B 2px solid;
+}
+.wordings{
+  padding-top: 2rem;
+}
+
+.tagline{
+  font-size: 2.0rem;
+  width: 85%;
+  color: #A1A1A1;
+  margin-bottom: 2rem;
+}
+.search{
+  border: #2B2B2B 1px solid;
+  border-radius: 0.5rem;
+  background-color: black;
+  color: white;
+  padding: 0.5rem 1rem;
+  width: 81%;
+  height: 3.5rem;
+  margin-bottom: 2rem;
+}
+h1{
+  /* border: #fd0e0e 3px solid; */
+  padding: 0.5rem 0;
+  line-height: 0.9;
+  margin-bottom: 2rem;
+  font-size: 4.5rem;
+  width:85%;
+}
+.membership{
+  font-size: 0.7rem;
+  letter-spacing: 0.2rem;
+  color: #A1A1A1;
+  font-weight: 400;
+  border: #2B2B2B 1px solid;
+  border-radius: 0.9rem;
+  background-color: black;
+  text-align: center;
+  margin-bottom: 1.5rem;
+  padding: 0.5rem 0.5rem;
+  width: 25% ;
+  margin-top: 1.3rem;
+}
+
+.types{
+  /* border: #0e62fd 2px solid; */
+ margin-top: 2rem;
+  display: flex;
+  justify-content: space-between;
+  height: 6%;
+  width: 35%;
+  font-size: 1.3rem;
+}
+.types a:hover{
+  background-color: #2B2B2B ;
+  border-radius: 2rem;
+
+padding: 0.5rem 1rem 0.5rem 1rem;
+
+}
+
+
+.carousel-wrapper {
+  /* border: #0efd1a 3px solid; */
+  
+  width: 62%;
+  padding: 2rem 2rem 4rem 2rem;
+  /* margin: 0 auto; */
+  margin-left: -10rem;
+  
+  overflow: hidden;
+  /* perspective: 800px; */
+  /* position: relative; */
+}
+
+.carousel-item {
+  /* padding: 0 10px; */
+  /* transition: all 0.3s ease; */
+  /* transform: scale(2.2) translateY(-100%); */
+  /* transition: all 0.5s ease; */
+  transform: scale(0.4);
+  /* transition: transform 0.1s ease; */
+  opacity: 0.5;
+  transform: scale(0.7) translateZ(-300px) rotateY(45deg);
+  transition: all 0.8s cubic-bezier(0.5, 0, 0.2, 1);
+  opacity: 0.4;
+  filter: blur(3px);
+ 
+}
+
+.react-multi-carousel-item--active {
+  /* transform: scale(1); */
+  transform: scale(1) translateX(0);
+  opacity: 1;
+  /* z-index: 1; */
+  /* transition: transform 0.3s ease; */
+  transform: scale(1) translateZ(0) rotateY(0);
+  opacity: 1;
+  filter: blur(0);
+  z-index: 1;
+}
+.carousel-item-inner {
+  /* opacity: 0.3; */
+  /* filter: blur(4px); */
+  /* transform: scale(0.8); */
+  /* transition: all 0.3s ease; */
+  /* padding: 0 15px; */
+  position: relative;
+  padding: 0 15px;
+  transform-style: preserve-3d;
+}
+
+.carousel-item-inner img {
+  width: 100%;
+  height: 30rem;
+  /* object-fit: cover; */
+  border-radius: 10px;
+  /* box-shadow: 0 5px 15px rgba(0,0,0,0.2); */
+  box-shadow: 0 15px 35px rgba(0,0,0,0.3);
+  transition: all 0.8s ease;
+  border: #2B2B2B 9px solid;
+  border-radius: 2rem;
+}
+
+@keyframes slideIn {
+  from {
+    transform: scale(0.7) translateZ(-300px) rotateY(45deg);
+    opacity: 0;
+  }
+  to {
+    transform: scale(1) translateZ(0) rotateY(0);
+    opacity: 1;
+  }
+}
+
+.react-multi-carousel-item--active {
+  animation: slideIn 0.8s cubic-bezier(0.4, 0, 0.2, 1);
+}
+/* Center item styling */
+
+
+
+
+.react-multi-carousel-item--active:hover .carousel-item-inner {
+  transform: translateY(-10px);
+}
+
+.react-multi-carousel-item--active:hover img {
+  box-shadow: 0 20px 40px rgba(0,0,0,0.4);
+}
+
+
+.nft-container {
+  
+  display: flex;
+  width:100%;
+  flex-wrap: wrap;
+  /* border: rgb(47, 0, 255) 2px solid; */
+  justify-content: space-between;
+  flex: 1 1 1px;
+ /* align-content: center; */
+ padding-left: 1rem ;
+ margin-top: 1.5rem;
+ /*  */
+
+}
+  /* position: fixed; */
+/* flex-direction: row; */
+.nft img {
+  width: 23rem; /* Set a fixed width */
+  height: 23rem; /* Set a fixed height */
+  object-fit: cover; /* Ensures the image covers the area without distortion */
+  border-radius: 8px;
+}
+.nft p{
+  margin-top: 0.3rem;
+}
+.name{
+  font-size: 1.2rem;
+  margin-left: 0.5rem;
+ 
+}
+.price{
+  font-size: 1rem;
+  color:#fcfafa57;
+  margin-left: 0.5rem;
+}
+.nft button{
+  display: flex;
+  border: 0px;
+  margin: -2.5rem 0rem 0rem 19.5rem;
+  padding:  0.5rem;
+  border-radius: 0.5rem;
+  background: #AD1FFF;
+  color: #fff;
+  font-weight: 600;
+
+}
+
+.footer{
+  color: #A1A1A1;
+  font-family: onest;
+}
+.footer p:hover , .footer p:active{
+  color: #fff;
+}
+@media (min-width: 1024px) {
+h1{
+  
+}  
+.mainpage{
+  
+}
+.tagline{
+  
+}
+
+.carousel-wrapper {
+  /* border: #0efd1a 3px solid; */
+  
+  /* width: 60%; */
+  
+  /* margin-right: -4rem; */
+}
+.membership{
+  
+}
+.tagline{
+ 
+}
+
+
+
+}
