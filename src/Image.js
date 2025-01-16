@@ -11,7 +11,7 @@ function Image(props) {
             <img src={props.src} alt={props.alt} />
             <p className='name'>{props.name}</p>
             <p className='price'>${props.price}.99 value</p>
-            <button>Pro</button>
+            <button>Download</button>
 
             
         </div>
