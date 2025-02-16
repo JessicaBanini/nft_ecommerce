@@ -7,10 +7,10 @@ function Footer() {
   return (
     <section className='footer'>
       <div className='logo'>
-            <img src={logo} alt="IHUB Logo" className='dlogo'/> Image Hub
+            <img src={logo} alt="IHUB Logo" className='dlogo'/> NFTs Hub
       </div>
 
-    <p>The new home for your digital goods</p>
+    <span>The new home for your digital goods</span>
     <button className='followbtn'>
       <img src={github} alt="github" className="githubicon"/>Follow
     </button>
@@ -18,25 +18,37 @@ function Footer() {
 
     
     <section className='other'>    
-    <div className='batch1'> 
-      <p>Product Hub</p>
-      <p>Git hub</p>
-      <p>Explore</p>
-      <p>Free Remix</p>
+    <div> 
+      <a>Product Hub</a>
+      <a>Git hub</a>
+      <a>Explore</a>
+      <a>Free Remix</a>
     </div>
 
-    <div className='batch2'>
-      <p>Account</p>
-      <p>Activate Membership</p>
-      <p>Sign in</p>
-      <p>Reset Password</p>
+    <div>
+      <a>Account</a>
+      <a>Activate Membership</a>
+      <a>Sign in</a>
+      <a>Reset Password</a>
     </div>
-  
+
+    <div className='mailing'>
+      <p className='join'>Join our mailing list </p>
+      <p>Get notified about new products as soon as they drop</p> 
+
+       <div className='mail'>
+        <input className='mailaddress' type="search" placeholder='Email Address'/>   
+        <button className='mailbtn'>Subscribe</button>
+       </div>
+      
+    </div>
     </section>
 
-    <p>Create by Jessica Emefa orgbenu-banini </p>
-    <p>design  by Danny Sapio</p>
-    <p>Join our mailing FileListGet noitified about new products as soon as they drop </p>
+    <div className='creators'>
+      <p>Created by Jessica Emefa Torgbenu-Banini </p>
+      <p>Design by Danny Sapio</p>
+    </div>
+    
     
     </section>
     

@@ -4,13 +4,14 @@ box-sizing: border-box;
 margin: 0;
 padding: 0;
 font-family: 'Onest';
+cursor: pointer;
 }
 
 body{
   background-color: #0D0D0D;
   color:white ;
   /* border: #0efd1a 3px solid; */
-  padding: 0rem 1rem 0 1rem;
+  padding: 1rem 1rem 0 1rem;
   display: flex;
   flex-direction: column;
   align-content: center;
@@ -129,11 +130,12 @@ h1{
   width: 35%;
   font-size: 1.3rem;
 }
-.types a:hover{
+.types
+ li.active{
   background-color: #2B2B2B ;
   border-radius: 2rem;
 
-padding: 0.5rem 1rem 0.5rem 1rem;
+padding: 0.2rem 1rem 0.2rem 1rem;
 
 }
 
@@ -229,15 +231,17 @@ padding: 0.5rem 1rem 0.5rem 1rem;
 
 
 .nft-container {
-  
   display: flex;
   width:100%;
   flex-wrap: wrap;
   /* border: rgb(47, 0, 255) 2px solid; */
   justify-content: space-between;
+  gap: -2rem;
+  align-items: center;
   flex: 1 1 1px;
  /* align-content: center; */
- padding-left: 1rem ;
+ padding-left: 2rem ;
+ padding-right: 2rem ;
  margin-top: 1.5rem;
  /*  */
 
@@ -257,6 +261,9 @@ padding: 0.5rem 1rem 0.5rem 1rem;
   font-size: 1.2rem;
   margin-left: 0.5rem;
  
+}
+.nft{
+  margin-bottom: 2rem;
 }
 .price{
   font-size: 1rem;
@@ -289,8 +296,8 @@ padding: 0.5rem 1rem 0.5rem 1rem;
   border-top: #2B2B2B 2px solid;
   margin-top: 6rem;
 }
-.footer p:hover , .footer p:active{
-  color: #fff;
+.footer a:hover , .footer a:active{
+  color: #bd18cc;
   cursor:pointer;
 }
 .followbtn{
@@ -314,11 +321,199 @@ padding: 0.5rem 1rem 0.5rem 1rem;
   display: flex;
   gap: 5rem;
 }
-.other p{
+.other div{
   display: flex;
   flex-direction: column;
-  gap:2rem;
-  justify-content: space-around;
+  gap:1rem;
+ 
+}
+.creators{
+  margin-top:4rem;
+  gap: 0.9rem;
+  margin-bottom:4rem;
+
+}
+.mailing{
+  margin-top: -2rem;
+  margin-left:13rem;
+  border:#2B2B2B 2px solid;
+  border-radius: 8px;
+  display:flex;
+  flex-direction: column;
+  /* gap: 0.3rem; */
+  /* align-items: center; */
+  /* justify-content: space-between; */
+  padding: 1rem 0rem 1.8rem 1rem;
+  width:49%;
+  
+  
+}
+.mailaddress{
+  border: #2B2B2B 1px solid;
+  border-radius: 0.5rem;
+  background-color: black;
+  color: white;
+  padding: 1rem ;
+  width:68%;
+  font-size: 1rem;
+  /* height: 2.5rem; */
+  /* margin-bottom: 2rem; */
+}
+
+.mailbtn{
+  width: 20%;
+  padding: 0.8rem 0.2rem 0.8rem 0.2rem;
+  border-width: 0;
+  /* border: #AD1FFF 3px solid; */
+  margin-top: -4.30rem;
+  margin-left: 27rem;
+  border-radius: 0.5rem;
+  font-weight: 500;
+  font-size: 1rem;
+}
+.join{
+  color: #fff;
+}
+.page-container {
+  display: flex;
+  justify-content: center; 
+  /* align-items: center;     Center vertically */
+  /* height: 100vh;    */
+  /* border: blue 3px solid ;        Full viewport height */
+}
+.license-container ,.form-container{
+  display: flex;
+  flex-direction: column;
+  /* justify-content: center; */
+  /* align-items: center; */
+  margin-top: 2rem; 
+  border: #2B2B2B 1px solid;
+  border-radius: 0.5rem;
+  background-color: black;
+  color: #ffffff;
+  padding: 1.5rem ;
+  width:45%;
+  font-size: 1.15rem; 
+  gap: 1rem;       
+  /*  */
+
+}
+.license-container h1{
+  font-size: 2rem;
+  margin-bottom: -0.4rem;
+
+}
+.license-container p{
+  /* width: 70%; */
+  text-align: left;  
+  color:#fcfafa57;
+
+}
+.license-container span{
+
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+.licenseno,.email,.password{
+  border: #2B2B2B 1px solid;
+  border-radius: 0.5rem;
+  background-color: black;
+  color: white;
+  padding: 1rem ;
+  width:100%;
+  font-size: 1rem;
+  /* height: 2.5rem; */
+  /* margin-bottom: 2rem; */
+}
+
+.licenseno:invalid {
+  border-color: red;
+}
+
+.licenseno:valid {
+  border-color: green;
+}
+
+.licenseno:focus:invalid{
+  outline: none;
+  box-shadow: 0 0 5px red;
+}
+
+.licenseno:focus:valid  {
+  outline: none;
+  box-shadow: 0 0 5px green;
+}
+
+
+.licensebtn , .signinbtn{
+  width: 100%;
+  padding: 0.8rem 0.2rem 0.8rem 0.2rem;
+  border-width: 0;
+  /* border: #AD1FFF 3px solid; */
+  
+  border-radius: 0.5rem;
+  font-weight: 500;
+  font-size: 1rem;
+}
+
+.licensebtn:hover,.licensebtn:active ,.signinbtn:hover,.signinbtn:active{
+  background-color: black;
+  color: #ffffff;
+  border: #ffffff solid 0.3px;
+}
+.req{
+
+    border: #2B2B2B 1px solid;
+    border-radius: 0.5rem;
+    background-color: black;
+    color: white;
+    padding: 1rem ;
+    width:100%;
+    font-size: 0.9rem;
+    /* height: 2.5rem; */
+    /* margin-bottom: 2rem; */
+
+}
+.be-amem{
+  border: #2B2B2B 1px solid;
+  border-radius: 0.5rem;
+  background-color: black;
+  color: white;
+  padding: 1rem ;
+  width:100%;
+  font-size: 1rem;
+  /* height: 2.5rem; */
+  /* margin-bottom: 2rem; */
+}
+.be-amem:hover{
+  background-color: white;
+  color: #0D0D0D;
+}
+.sign{
+  display: flex;
+  justify-content: center;
+}
+.sign:hover{
+  color: #ffffff;
+}
+.form-container form{
+display: flex;
+flex-direction: column;
+gap: 0.5rem;
+
+}
+.signin-form span{
+  width: 100%;
+  text-align: right;
+  font-size: 0.9rem;
+  color:#646363 ;
+}
+.signin-form span:hover{
+  color: #f0f0f0;
+  text-decoration:underline;
+}.form-container p{
+  text-align: center;
 }
 
 
