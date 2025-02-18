@@ -3,6 +3,7 @@ import { BrowserRouter as Router, Routes, Route, Link } from 'react-router-dom';
 import FilteredImages from './FilteredImages';
 import './App.css';
 import './Navbar.js';
+import Success from './Success.js';
 import Navbar from './Navbar.js';
 import Mainpage from './Mainpage.js';
 import License from './License.js';
@@ -40,6 +41,7 @@ import Midnightsnack from './images/Midnightsnack.png';
 import Footer from './Footer.js';
 import { type } from '@testing-library/user-event/dist/type/index.js';
 import SignIn from './SignIn.js';
+import Membership from './Membership.js';
 
 
 
@@ -238,6 +240,9 @@ function App() {
       <Route path="/" element={<FilteredImages images={images} />} />
       <Route path="/license" element={<License/>} />
       <Route path="/signin" element={<SignIn/>} />
+      <Route path="/success" element={<Success/>} />
+      <Route path="/membership" element={<Membership/>} />
+
 
 
         <Route path="/images/:type" element={<FilteredImages images={images} />} />

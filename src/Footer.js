@@ -2,6 +2,7 @@ import React from 'react'
 import logo from './images/logo.png';
 import github from './images/github.png';
 import './App.css';
+import { Link } from 'react-router-dom';
 
 function Footer() {
   return (
@@ -11,25 +12,26 @@ function Footer() {
       </div>
 
     <span>The new home for your digital goods</span>
-    <button className='followbtn'>
+   <Link to='https://github.com/EmyBrown' ><button className='followbtn' >
       <img src={github} alt="github" className="githubicon"/>Follow
     </button>
-
+    </Link>
+ 
 
     
     <section className='other'>    
     <div> 
-      <a>Product Hub</a>
-      <a>Git hub</a>
-      <a>Explore</a>
-      <a>Free Remix</a>
+      <a href='/'>Product Hub</a>
+      <a href='https://github.com/EmyBrown'>Git hub</a>
+      <a href='/'>Explore</a>
+      <a href=''>LinkedIn</a>
     </div>
 
     <div>
       <a>Account</a>
-      <a>Activate Membership</a>
-      <a>Sign in</a>
-      <a>Reset Password</a>
+      <a href='/membership'>Activate Membership</a>
+      <a href='/signin'>Sign in</a>
+      <a href='/license'>Activate License</a>
     </div>
 
     <div className='mailing'>
@@ -38,7 +40,7 @@ function Footer() {
 
        <div className='mail'>
         <input className='mailaddress' type="search" placeholder='Email Address'/>   
-        <button className='mailbtn'>Subscribe</button>
+       <button  className='mailbtn'><Link to='mailto:jessiemefa@gmail.com'>Subscribe</Link></button> 
        </div>
       
     </div>

@@ -46,9 +46,9 @@ function Mainpage() {
   };
 
   // Filter images based on search query
-  // const filteredImages = images.filter(image =>
-  //   image.name.toLowerCase().includes(searchQuery.toLowerCase())
-  // );
+  const filteredImages = images.filter(image =>
+    image.name.toLowerCase().includes(searchQuery.toLowerCase())
+  );
   
 
   return (
@@ -96,7 +96,8 @@ function Mainpage() {
             // transitionDuration={800}
             customTransition="transform 2000ms ease-in-out"
           >
-            {images.length > 0 ? (
+            {filteredImages.length > 0 ? (
+              
               images.map((image, index) => (
                 <div key={index} className="carousel-item-inner">
                   <img

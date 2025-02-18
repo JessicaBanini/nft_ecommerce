@@ -60,6 +60,10 @@ li{
   color: white;
   padding: 0.5rem 1rem;
 }
+.signin:hover{
+  background-color: #ffffff;
+  color: #000000;
+}
 .member{
   border: #2B2B2B 1px solid;
   border-radius: 0.5rem;
@@ -67,6 +71,10 @@ li{
   color: black;
   padding: 0.5rem 1rem;
   font-weight: 600;
+}
+.member:hover{
+  /* color: black; */
+  background-color: rgb(0, 0, 0);
 }
 .mainpage{
   padding: 0rem 2rem 0 2rem;
@@ -270,7 +278,7 @@ padding: 0.2rem 1rem 0.2rem 1rem;
   color:#fcfafa57;
   margin-left: 0.5rem;
 }
-.nft button{
+.nft button {
   display: flex;
   border: 0px;
   margin: -2.7rem 0rem 0rem 19.8rem;
@@ -282,7 +290,7 @@ padding: 0.2rem 1rem 0.2rem 1rem;
 
 
 }
-.downloadicon{
+.downloadicon {
   width: 23px !important; /* Set the desired width */
   height:20px !important;
 }
@@ -296,7 +304,7 @@ padding: 0.2rem 1rem 0.2rem 1rem;
   border-top: #2B2B2B 2px solid;
   margin-top: 6rem;
 }
-.footer a:hover , .footer a:active{
+.footer a:hover , .footer a:active , .bottom span:hover{
   color: #bd18cc;
   cursor:pointer;
 }
@@ -360,7 +368,7 @@ padding: 0.2rem 1rem 0.2rem 1rem;
   /* margin-bottom: 2rem; */
 }
 
-.mailbtn{
+.mail .mailbtn{
   width: 20%;
   padding: 0.8rem 0.2rem 0.8rem 0.2rem;
   border-width: 0;
@@ -370,18 +378,19 @@ padding: 0.2rem 1rem 0.2rem 1rem;
   border-radius: 0.5rem;
   font-weight: 500;
   font-size: 1rem;
+  color: #000000;
 }
 .join{
   color: #fff;
 }
-.page-container {
+.page-container ,.card-page{
   display: flex;
   justify-content: center; 
   /* align-items: center;     Center vertically */
-  /* height: 100vh;    */
-  /* border: blue 3px solid ;        Full viewport height */
+  /* height: 100%;    */
+  /* border: blue 3px solid ;   */
 }
-.license-container ,.form-container{
+.license-container ,.form-container ,.card{
   display: flex;
   flex-direction: column;
   /* justify-content: center; */
@@ -446,7 +455,7 @@ padding: 0.2rem 1rem 0.2rem 1rem;
 }
 
 
-.licensebtn , .signinbtn{
+.licensebtn , .signinbtn,.purchase{
   width: 100%;
   padding: 0.8rem 0.2rem 0.8rem 0.2rem;
   border-width: 0;
@@ -457,7 +466,7 @@ padding: 0.2rem 1rem 0.2rem 1rem;
   font-size: 1rem;
 }
 
-.licensebtn:hover,.licensebtn:active ,.signinbtn:hover,.signinbtn:active{
+.licensebtn:hover,.licensebtn:active ,.signinbtn:hover,.signinbtn:active ,.purchase:hover ,.purchase:active{
   background-color: black;
   color: #ffffff;
   border: #ffffff solid 0.3px;
@@ -475,7 +484,7 @@ padding: 0.2rem 1rem 0.2rem 1rem;
     /* margin-bottom: 2rem; */
 
 }
-.be-amem{
+.be-amem {
   border: #2B2B2B 1px solid;
   border-radius: 0.5rem;
   background-color: black;
@@ -495,7 +504,7 @@ padding: 0.2rem 1rem 0.2rem 1rem;
   justify-content: center;
 }
 .sign:hover{
-  color: #ffffff;
+  color: #AD1FFF;
 }
 .form-container form{
 display: flex;
@@ -515,7 +524,87 @@ gap: 0.5rem;
 }.form-container p{
   text-align: center;
 }
+.card-page{
+  display: flex;
+  flex-direction: column;
+  /* border: blue 3px solid; */
+  justify-content: center;
+  align-items: center;
+  padding: 2rem;
+  
+}
+.card-container{
+  display: flex;
+ justify-content: space-evenly;
+ width: 70%;
+ 
+}
+.card p{
+  color:#fcfafa57;
+}
 
+.bill{
+  text-align: center;
+  border-bottom: #2B2B2B 2px solid;
+ padding-bottom: 1rem;
+}
+.successicon{
+  width:2rem;
+  height: 2rem;
+  /* margin-top: 0.5rem; */
+}
+.success-page{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 10rem;
+}
+.card-head {
+  display: flex;
+  justify-content: space-between;
+  /* border: #AD1FFF 4px solid; */
+  align-items: center;
+  color:#fcfafa57;
+
+}
+.card-head  p{ 
+  border: 0px;
+  padding:  0.5rem;
+  border-radius: 0.5rem;
+  background: #AD1FFF;
+  color: #fff;
+}
+.card-container h2{
+  font-size: 2.5rem;
+}
+.tick-head{
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+
+}
+.mini p{
+  padding-left: 2.8rem;
+}
+
+.card-page .bottom{
+  margin-top: 2rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color:#fcfafa57;
+}
+.bottom span{
+  color: #AD1FFF;
+  display: flex;
+  gap: 0.6rem;
+  margin-top: 0.5rem;
+  justify-content: center;
+  align-items: center;
+  /* flex-direction: column; */
+}
 
 @media (min-width: 1024px) {
 h1{
