@@ -154,6 +154,8 @@ h1{
 padding: 0.2rem 1rem 0.2rem 1rem;
 
 }
+.types li{z-index: 10; /* Ensure it's above other elements */
+  pointer-events: auto; /* Allow clicks */}
 
 
 .carousel-wrapper {

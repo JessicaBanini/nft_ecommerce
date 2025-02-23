@@ -75,7 +75,7 @@ function Mainpage({ searchQuery, setSearchQuery }) {
             <li className={activeCategory === 'animal' ? 'active' : ''} onClick={() => handleCategoryClick('animal')}>
               <Link to="/images/animal">Animals</Link>
             </li>
-            <li className={activeCategory === 'monster' ? 'active' : ''} onClick={() => handleCategoryClick('monster')}>
+            <li className={activeCategory === 'monster' ? 'active' : ''} onClick={() => handleCategoryClick('monster')}  onTouchStart={() => handleCategoryClick('monster')}>
               <Link to="/images/monster">Monsters</Link>
             </li>
             
