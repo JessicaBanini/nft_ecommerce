@@ -154,7 +154,8 @@ h1{
 padding: 0.2rem 1rem 0.2rem 1rem;
 
 }
-.types li{z-index: 10; /* Ensure it's above other elements */
+.types li{
+  z-index: 1; /* Ensure it's above other elements */
   pointer-events: auto; /* Allow clicks */}
 
 
@@ -301,9 +302,14 @@ padding: 0.2rem 1rem 0.2rem 1rem;
 
 
 }
+.nft button:active {
+background: #0D0D0D;
+/* border: #f0f0f0 solid 0.2px; */
+}
 .downloadicon {
   width: 23px !important; /* Set the desired width */
   height:20px !important;
+ 
 }
 
 .dlogo{

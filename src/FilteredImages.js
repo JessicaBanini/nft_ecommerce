@@ -6,6 +6,31 @@ import Mainpage from './Mainpage';
 
 
 function FilteredImages({ images}) {
+  const handleDownload = async () => {
+    try {
+      const response = await fetch(images.src);
+      const blob = await response.blob();
+      const blobUrl = URL.createObjectURL(blob);
+  
+      const link = document.createElement("a");
+      link.href = blobUrl;
+      link.download = `${images.name}.png`; // Correct file name
+      document.body.appendChild(link);
+  
+      setTimeout(() => {
+        link.click(); // Auto-triggers "Save As"
+        document.body.removeChild(link);
+        URL.revokeObjectURL(blobUrl); // Free memory
+      }, 100);
+  
+    } catch (error) {
+      console.error("Download failed:", error);
+    }
+  };
+  
+  
+  
+
   const [searchQuery, setSearchQuery] = useState("");  // Manage search state here
   const { type } = useParams();
   const filteredImages = images
@@ -26,7 +51,7 @@ function FilteredImages({ images}) {
             <img src={image.src} alt={image.alt} />
             <p className='name'>{image.name}</p>
             <p className='price'>${image.price}.99 value</p>
-            <button>
+            <button onClick={handleDownload} className='downloadbtn'>
               <img src={download} alt="Download" className="downloadicon"/>
             </button>
 
