@@ -1,4 +1,4 @@
-import React from 'react'
+import React,{useState} from 'react'
 import { BrowserRouter as Router, Routes, Route, Link } from 'react-router-dom';
 import FilteredImages from './FilteredImages';
 import './App.css';
@@ -230,6 +230,8 @@ function App() {
       type: 'monster' },
     
   ];
+  
+
   return (
     <>
 

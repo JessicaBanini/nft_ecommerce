@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
-// import FilteredImages from './FilteredImages';
-
+import FilteredImages from './FilteredImages';
+import App from './App';
 import Carousel from 'react-multi-carousel';
 import 'react-multi-carousel/lib/styles.css';
 import FuzzySlim from './images/FuzzySlim.png';
@@ -9,7 +9,7 @@ import Cyndor from './images/Cyndor.png';
 import Gorilla from './images/Gorilla.png';
 import CodeRed from './images/CodeRed.png';
 
-function Mainpage() {
+function Mainpage({ searchQuery, setSearchQuery }) {
   const responsive = {
     desktop: {
       breakpoint: { max: 3000, min: 1024 },
@@ -35,7 +35,7 @@ function Mainpage() {
   ];  
 
   const [activeCategory, setActiveCategory] = useState('all');
-  const [searchQuery, setSearchQuery] = useState(''); // State for search query
+  // const [searchQuery, setSearchQuery] = useState(''); // State for search query
 
   const handleCategoryClick = (category) => {
     setActiveCategory(category);
@@ -45,10 +45,10 @@ function Mainpage() {
     setSearchQuery(event.target.value);
   };
 
-  // Filter images based on search query
-  const filteredImages = images.filter(image =>
-    image.name.toLowerCase().includes(searchQuery.toLowerCase())
-  );
+  // // Filter images based on search query
+  // const filteredImages = images.filter(image =>
+  //   image.name.toLowerCase().includes(searchQuery.toLowerCase())
+  // );
   
 
   return (
@@ -63,8 +63,8 @@ function Mainpage() {
                type="search" 
                placeholder='Search 3D assets...'
                value={searchQuery}
-               onChange={handleSearchChange}
-          />   
+               onChange={handleSearchChange}  // Use the handler function
+               />   
         <div className='types'>
         <li className={activeCategory === 'all' ? 'active' : ''} onClick={() => handleCategoryClick('all')}>
               <Link to="/images/all">All</Link>
@@ -96,7 +96,7 @@ function Mainpage() {
             // transitionDuration={800}
             customTransition="transform 2000ms ease-in-out"
           >
-            {filteredImages.length > 0 ? (
+            {images.length > 0 ? (
               
               images.map((image, index) => (
                 <div key={index} className="carousel-item-inner">

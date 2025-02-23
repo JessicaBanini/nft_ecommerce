@@ -1,17 +1,23 @@
-import React from 'react';
+import React,{useState} from 'react';
 import { useParams } from 'react-router-dom';
 import './App.css';
 import download from './images/download.png';
 import Mainpage from './Mainpage';
 
 
-function FilteredImages({ images }) {
+function FilteredImages({ images}) {
+  const [searchQuery, setSearchQuery] = useState("");  // Manage search state here
   const { type } = useParams();
-  const filteredImages = !type || type === 'all' ? images : images.filter(image => image.type === type);
+  const filteredImages = images
+  .filter(image => !type || type === 'all' || image.type === type)
+  .filter(image => image.name.toLowerCase().includes(searchQuery.toLowerCase()));
 //   console.log('Filtered images:', filteredImages); // Log the filtered images
 
   return (<>
-    <Mainpage/>
+     <Mainpage 
+        searchQuery={searchQuery} 
+        setSearchQuery={setSearchQuery}
+      />
 
     <div className='nft-container'>
       {filteredImages.length > 0 ? (

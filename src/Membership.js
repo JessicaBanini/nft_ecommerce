@@ -6,7 +6,7 @@ function Membership() {
   return (
     <div className="card-page">
         <h2>Get Unlimited Access</h2>
-        <p>Access hundreds of pro 3D asset with a subscription</p>
+        <p className='tag'>Access hundreds of pro 3D asset with a subscription</p>
   <section className='card-container'>
   <div className='card'>
     <div className='card-head'>Monthly 
