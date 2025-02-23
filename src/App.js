@@ -42,6 +42,8 @@ import Footer from './Footer.js';
 import { type } from '@testing-library/user-event/dist/type/index.js';
 import SignIn from './SignIn.js';
 import Membership from './Membership.js';
+// import { useNavigate } from 'react-router-dom';
+import { Suspense } from 'react';
 
 
 
@@ -237,6 +239,7 @@ function App() {
 
     <Navbar />
     {/* <Mainpage/> */}
+    <Suspense fallback={<div>Loading...</div>}>
       <Routes>
         
       <Route path="/" element={<FilteredImages images={images} />} />
@@ -249,6 +252,7 @@ function App() {
 
         <Route path="/images/:type" element={<FilteredImages images={images} />} />
       </Routes>
+      </Suspense>
       <Footer />
     </>
       
