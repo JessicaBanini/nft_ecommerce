@@ -5,6 +5,7 @@ margin: 0;
 padding: 0;
 font-family: 'Onest';
 cursor: pointer;
+-webkit-tap-highlight-color: transparent;
 }
 
 body{
@@ -16,6 +17,7 @@ body{
   flex-direction: column;
   align-content: center;
   justify-content: center;
+  transition: background-color 0.3s ease;
 }
 a{
   text-decoration-line: none;
