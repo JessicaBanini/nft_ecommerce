@@ -20,7 +20,7 @@ function Navbar(){
           <div className={`pages ${menuOpen ? "open" : ""}`}>
               {/* <ul> */}
                   <li><a href="/">Explore</a></li>
-                  <li><a href="https://github.com/EmyBrown">Github</a></li>
+                  <li><a href="https://github.com/JessicaBanini/nft_ecommerce">Github</a></li>
                   <li><a href="/license">Activate License</a></li>
                   <li><a href="/signin" button className='signin'>Sign In</a ></li>
                   <li><a href="/membership" button className='member'>Become a Member</a></li>
