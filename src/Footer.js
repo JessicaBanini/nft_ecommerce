@@ -12,7 +12,7 @@ function Footer() {
       </div>
 
     <span>The new home for your digital goods</span>
-   <Link to='https://github.com/EmyBrown' ><button className='followbtn' >
+   <Link to='https://github.com/JessicaBanini/nft_ecommerce' ><button className='followbtn' >
       <img src={github} alt="github" className="githubicon"/>Follow
     </button>
     </Link>
@@ -22,7 +22,7 @@ function Footer() {
     <section className='other'>    
     <div> 
       <a href='/'>Product Hub</a>
-      <a href='https://github.com/EmyBrown'>Git hub</a>
+      <a href='https://github.com/JessicaBanini/nft_ecommerce'>Git hub</a>
       <a href='/'>Explore</a>
       <a href=''>LinkedIn</a>
     </div>
